@@ -5,8 +5,9 @@
 - App name: 桑皮纸 / Mulberry
 - Bundle ID: `com.chenbaoliang.mulberry`
 - Category suggestion: Productivity or Lifestyle
-- Privacy Policy URL: publish `AppStore/PrivacyPolicy.html` to a stable public URL and paste it here.
-- Support URL: publish `AppStore/Support.html` to a stable public URL and paste it here.
+- Privacy Policy URL: `https://klsk007.github.io/mulberry-app-pages/PrivacyPolicy.html`
+- Support URL: `https://klsk007.github.io/mulberry-app-pages/Support.html`
+- Terms URL: `https://klsk007.github.io/mulberry-app-pages/TermsOfUse.html`
 - License Agreement: Apple Standard EULA is acceptable unless you want a custom EULA.
 
 ## In-App Purchase
@@ -28,7 +29,7 @@ Required:
 - iPad screenshots showing actual use, not only concept art.
 - Description should mention handwriting AI notebook, diary, memory, voice/call mode, and Pro unlock.
 - Avoid AI brand names in metadata if distributing in China mainland.
-- Support URL: publish `AppStore/Support.html` or use a stable public contact page.
+- Support URL: `https://klsk007.github.io/mulberry-app-pages/Support.html`
 
 ## Review Information
 
