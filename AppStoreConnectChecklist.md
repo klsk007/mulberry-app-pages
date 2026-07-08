@@ -45,4 +45,4 @@ Required:
 
 ## Export Compliance
 
-The app uses standard Apple networking/TLS and does not implement custom encryption. Answer export compliance accordingly in App Store Connect.
+The app uses standard Apple networking/TLS and does not implement custom encryption. `ITSAppUsesNonExemptEncryption` is set to `false` in `Info.plist`.
