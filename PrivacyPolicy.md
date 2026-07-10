@@ -1,22 +1,24 @@
-# Mulberry Privacy Policy
+# Morus Paper Privacy Policy
 
 Last updated: July 8, 2026
 
-Mulberry ("the app") is a handwriting AI notebook app. It lets users write by hand, recognize handwriting, receive AI answers, keep local diary-style notes, and optionally use voice input or call mode.
+Morus Paper ("the app", listed on the App Store as Magic Spellbook AI / 魔法书AI笔记) is a handwriting AI notebook app. It lets users write by hand, recognize handwriting, receive AI answers, keep local diary-style notes, and optionally use voice input or call mode.
 
 ## Data Stored on Device
 
-The app stores app settings, diaries, recent conversation turns, identity memory, long-term memory cards, and purchase unlock status on the user's device. This data is used to provide the notebook, diary, memory, and Pro features.
+The app stores app settings, diaries, recent conversation turns, identity memory, long-term memory cards, and purchase unlock status on the user's device. API keys entered by the user are stored in the iOS Keychain rather than embedded in the app or saved with ordinary preferences. This data is used to provide the notebook, diary, memory, and Pro features.
 
 ## Data Sent to Service Providers
 
-When handwriting recognition is used, the app may send an image of the handwritten page to the configured OCR service.
+By default, handwriting recognition uses iOS on-device OCR. If the user switches to API OCR or a custom OCR provider, the app may send an image of the handwritten page to the configured OCR service.
 
-When AI answers are used, the app may send recognized text, necessary recent conversation context, summary memory, and the system prompt to the configured language model service.
+By default, AI answers use Apple's on-device Foundation Models framework when available. If Apple on-device AI is unavailable, the app may fall back to a local Llama 3.2 3B Instruct Q4_K_M model bundled with the app. Local Llama inference runs on device and does not send prompts to a model download source.
+
+If the user switches to a high-quality API model, the app may send recognized text, necessary recent conversation context, summary memory, and the system prompt to the configured language model service.
 
 When voice input or call mode is used, speech may be processed by Apple's iOS Speech framework, and custom voice model services may receive text that needs to be spoken aloud.
 
-The app's default test connection uses Alibaba Bailian model services. Users may also configure compatible third-party model services. Those providers process requests according to their own terms and privacy policies.
+Users may configure compatible third-party model services, such as Alibaba Bailian, for higher-quality OCR, answers, or voice output. Those providers process requests according to their own terms and privacy policies.
 
 ## What the App Does Not Do
 
@@ -36,4 +38,4 @@ The app is not designed specifically for children. Users should not enter sensit
 
 ## Contact
 
-For support or privacy questions, use the support contact provided on the App Store product page.
+For support or privacy questions, [open a support request](https://github.com/klsk007/mulberry-app-pages/issues/new). Please do not include API keys, private diary text, or other sensitive information.

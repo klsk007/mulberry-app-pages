@@ -1,32 +1,34 @@
-# App Privacy Answers Draft
+# App Privacy Answers
 
-Use this as a conservative starting point for App Store Connect App Privacy.
+Use these answers for the current 1.0 binary. Recheck them if analytics, a developer server, accounts, or a bundled cloud API key is added later.
 
 ## Data Collection
 
-The developer does not run an analytics or advertising backend and does not sell or track user data across apps.
+Answer **Yes, data is collected** because optional user-configured OCR, language-model, and voice providers can receive content from the app. The developer does not operate an analytics or advertising backend and does not sell data.
 
-However, the app sends user content to third-party model services when the user uses OCR, AI answer, or custom voice features. App Store Connect may consider that data "collected" by third parties. Fill this honestly based on the final provider configuration.
+## Declare This Data Type
 
-## Likely Data Types
+- **User Content -> Other User Content**
+- Examples: handwriting page images, recognized text, prompts, necessary conversation context, memory summaries, and text sent to a custom voice provider.
+- Purpose: **App Functionality** only.
+- Linked to the user: **Yes** as the conservative answer. A user-supplied provider API key can associate requests with that provider account even though Morus Paper has no account system.
+- Used for tracking: **No**.
 
-- User Content: handwriting page images, recognized text, prompts, AI conversation context, diary-derived memory summaries when needed for AI responses.
-- Audio Data: voice input may be processed through Apple's Speech framework; custom voice/call features may process speech-derived transcripts and speech output text.
-- Purchase History: StoreKit purchase status for Pro unlock.
+## Do Not Declare For This Binary
 
-## Usage Purposes
-
-- App Functionality: OCR, AI answers, voice/call mode, Pro unlock restoration, diary and memory features.
-- Not used for third-party advertising.
-- Not used for tracking across apps and websites.
+- **Audio Data:** microphone audio is used for real-time Apple Speech recognition and is not retained or sent to the developer's server. Custom voice providers receive answer text, not microphone audio.
+- **Purchase History:** StoreKit verifies the Pro entitlement on device; the developer does not receive or store purchase history on a separate server.
+- **Identifiers, diagnostics, usage data, location, contacts, financial information, health, browsing history, or search history:** the app does not collect these data types.
 
 ## Tracking
 
-Answer "No" for tracking if no ad SDK, analytics SDK, ATT usage, or cross-app tracking domain is added.
+Answer **No**. The app has no advertising SDK, analytics SDK, ATT request, data broker integration, or cross-app tracking.
 
-## Linked to User
+## Notes
 
-If no account system is added, local diaries and memory are not linked to a developer account. Third-party model providers may process requests according to their own policies. If App Store Connect asks whether provider-processed user content is linked to the user, answer according to the final provider's account/API setup.
+- Local diaries, recent conversations, memory cards, settings, and API credentials stay on device. API credentials are stored in Keychain.
+- On-device Vision OCR, Apple Foundation Models, and the bundled Llama model do not send prompts to the developer.
+- The privacy policy explains when optional third-party services receive user content.
 
 ## Privacy Manifest In App Bundle
 

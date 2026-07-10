@@ -17,7 +17,7 @@ Please attach a short physical-device recording that starts from launching the a
 
 ## 2. App Purpose
 
-Mulberry is an iPad handwriting AI notebook. It provides a minimal paper-like interface where users write questions by hand, the app recognizes the handwriting, sends the text to a configured language model service, and writes the answer back onto the page. It also saves daily diary-style notes and local memory so repeated conversations feel continuous.
+Magic Spellbook AI / 魔法书AI笔记 is an iPad handwriting AI notebook internally branded as Morus Paper / 桑皮纸. It provides a minimal paper-like interface where users write questions by hand, the app recognizes the handwriting, and the answer is written back onto the page. By default it uses iOS on-device OCR and Apple's on-device Foundation Models framework. If Apple on-device AI is unavailable, it can fall back to a local Llama 3.2 3B Instruct Q4_K_M model bundled with the app and running on device. Users can optionally configure compatible API services for higher-quality OCR or language model answers. It also saves daily diary-style notes and local memory so repeated conversations feel continuous.
 
 ## 3. Access Instructions
 
@@ -45,13 +45,13 @@ To test Pro:
 
 ## 4. External Services
 
-The app uses Apple StoreKit for in-app purchase, Apple's Speech framework for speech recognition permission and transcription, Apple's AVFoundation for microphone and text-to-speech/audio playback, Alibaba Bailian model services for the default test AI/OCR/TTS connection, and optional user-configured compatible OCR or voice model services.
+The app uses Apple StoreKit for in-app purchase, Apple's Speech framework for speech recognition permission and transcription, Apple's AVFoundation for microphone and text-to-speech/audio playback, Apple's Vision framework for default on-device OCR, Apple's Foundation Models framework for default on-device answers, and llama.cpp/LlamaSwift for the local Llama fallback model. Users may optionally configure compatible API services such as Alibaba Bailian for higher-quality model answers, OCR, or custom voice output.
 
-The app does not require account registration and does not operate a developer-hosted backend server for diary or conversation storage.
+The app does not require account registration and does not operate a developer-hosted backend server for diary or conversation storage. API keys entered by the reviewer are stored in the iOS Keychain and are not embedded in the app binary.
 
 ## 5. Regional Differences
 
-The app is intended to function consistently across regions where the configured model services are available. AI/OCR/TTS availability may depend on the user's network, region, and the third-party provider configured in Settings.
+The app's default Apple on-device experience depends on iOS/Apple Intelligence availability on the user's device. The local Llama fallback is bundled with the app and is enabled only when the device has enough physical memory; lower-memory devices can use a user-configured API instead. Optional API model availability may depend on the user's network, region, and third-party provider configured in Settings.
 
 ## 6. Regulated Industry
 
