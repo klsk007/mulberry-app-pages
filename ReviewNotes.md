@@ -2,6 +2,10 @@
 
 No account, login, or demo credentials are required.
 
+## App Purpose
+
+Magic Spellbook AI is an iPad handwriting notebook. It lets a user ask a question with Apple Pencil or a finger, watch the original ink fade, and read an AI answer written back on the same page. Conversations can be kept as local daily diary entries. The product-page App Preview demonstrates the core write, fade, and answer flow.
+
 ## Main Flow
 
 1. Launch the app. On first launch, tap or write once to wake the page and complete the short naming flow.
@@ -20,8 +24,25 @@ Morus Paper Pro is a one-time, non-consumable lifetime purchase. Open the Pro sc
 
 Black Paper and Morus Paper can be tried for three days before Pro is required. The core handwriting, on-device OCR, and answer flow remain usable without purchase.
 
+## External Services And Frameworks
+
+- Apple Vision provides the default on-device handwriting OCR.
+- Apple Foundation Models provides the default answer engine on supported devices.
+- Apple Speech and AVFoundation provide optional speech recognition and audio playback.
+- StoreKit 2 provides the one-time Pro in-app purchase and Restore Purchases.
+- The optional Offline Llama model uses the LlamaSwift/llama.cpp runtime and is delivered by the App Store as an on-demand resource.
+- If a user explicitly configures a compatible third-party OCR, language-model, or voice API, the selected provider processes the content needed for that request.
+
+The app has no developer-operated AI backend, account service, advertising SDK, or analytics SDK.
+
+## Regional Availability
+
+Version 1.0 is intended for the United States, Canada, United Kingdom, Australia, New Zealand, Singapore, Taiwan, and Hong Kong. Core app behavior is the same in each storefront. Availability of Apple's on-device language model depends on the review device, OS, and supported language; Offline Llama and user-configured API modes are explicit alternatives.
+
 ## Permissions And Data
 
 Microphone and speech-recognition permissions are requested only when the user starts voice input or Pro call mode. No account is required. Diaries, recent conversations, and memory remain on device. The developer does not operate a backend that stores diary or conversation content.
 
 AI output can be inaccurate and is not presented as medical, legal, financial, or other professional advice.
+
+The app is not a regulated healthcare, financial, gambling, insurance, or legal service, so no regulated-industry credentials are applicable.
