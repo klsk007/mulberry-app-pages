@@ -1,58 +1,27 @@
-# App Review Notes Draft
+# App Review Notes
 
-No account is required.
+No account, login, or demo credentials are required.
 
-## 1. Physical Device Screen Recording
+## Main Flow
 
-Please attach a short physical-device recording that starts from launching the app and shows:
+1. Launch the app. On first launch, tap or write once to wake the page and complete the short naming flow.
+2. Write a short question with Apple Pencil or a finger.
+3. Stop writing for five seconds to submit automatically, or tap the moon control on the left edge.
+4. The handwritten question fades and the answer appears on the same page.
+5. Tap the sun control on the left edge to clear the current answer and write again.
 
-1. First launch / onboarding prompt.
-2. Writing a question by hand on the page.
-3. Tapping the moon/read button and seeing ink fade.
-4. AI answer appearing on the same page.
-5. Opening Settings from the left-side button.
-6. Opening About, Privacy Policy, and Terms of Use.
-7. Opening the Pro purchase screen and using Restore Purchases.
-8. Optional: voice input permission prompt and call mode.
+The default OCR is Apple's on-device Vision framework. The default answer engine uses Apple's on-device Foundation Models framework when supported. When Apple on-device AI is unavailable, the app can use its bundled Llama 3.2 3B Instruct Q4_K_M model on devices with sufficient memory. Users may optionally enter their own compatible API credentials in Settings for higher-quality answers or OCR. API credentials are stored in the iOS Keychain.
 
-## 2. App Purpose
+## Settings And Pro
 
-Magic Spellbook AI / 魔法书AI笔记 is an iPad handwriting AI notebook internally branded as Morus Paper / 桑皮纸. It provides a minimal paper-like interface where users write questions by hand, the app recognizes the handwriting, and the answer is written back onto the page. By default it uses iOS on-device OCR and Apple's on-device Foundation Models framework. If Apple on-device AI is unavailable, it can fall back to a local Llama 3.2 3B Instruct Q4_K_M model bundled with the app and running on device. Users can optionally configure compatible API services for higher-quality OCR or language model answers. It also saves daily diary-style notes and local memory so repeated conversations feel continuous.
+Tap the star control on the left edge to open Settings. The settings sheet includes page style, language, OCR/model choices, diary, memory, About, Privacy Policy, and Terms of Use.
 
-## 3. Access Instructions
+Morus Paper Pro is a one-time, non-consumable lifetime purchase. Open the Pro screen from Settings or by selecting a gated feature. It unlocks call mode, custom OCR, long-term memory and automatic compression, formulas and emoji, and permanent access to all paper styles. The purchase screen includes Restore Purchases.
 
-No login or demo account is required.
+Black Paper and Morus Paper can be tried for three days before Pro is required. The core handwriting, on-device OCR, and answer flow remain usable without purchase.
 
-To test the main feature:
+## Permissions And Data
 
-1. Launch the app.
-2. If onboarding appears, answer the first prompt or skip the guide.
-3. Write a short question on the page.
-4. Tap the moon/read button on the left side.
-5. Wait for the handwritten answer to appear.
+Microphone and speech-recognition permissions are requested only when the user starts voice input or Pro call mode. No account is required. Diaries, recent conversations, and memory remain on device. The developer does not operate a backend that stores diary or conversation content.
 
-To test Settings:
-
-1. Tap the settings button on the left side.
-2. Change page color, language, writing settings, and recognition language.
-3. Open About to view privacy and terms.
-
-To test Pro:
-
-1. Open Settings.
-2. Tap the Pro unlock entry or any gated Pro feature, such as Call Mode or Custom OCR.
-3. The purchase screen explains the lifetime Pro unlock and includes Restore Purchases, Privacy Policy, and Terms of Use.
-
-## 4. External Services
-
-The app uses Apple StoreKit for in-app purchase, Apple's Speech framework for speech recognition permission and transcription, Apple's AVFoundation for microphone and text-to-speech/audio playback, Apple's Vision framework for default on-device OCR, Apple's Foundation Models framework for default on-device answers, and llama.cpp/LlamaSwift for the local Llama fallback model. Users may optionally configure compatible API services such as Alibaba Bailian for higher-quality model answers, OCR, or custom voice output.
-
-The app does not require account registration and does not operate a developer-hosted backend server for diary or conversation storage. API keys entered by the reviewer are stored in the iOS Keychain and are not embedded in the app binary.
-
-## 5. Regional Differences
-
-The app's default Apple on-device experience depends on iOS/Apple Intelligence availability on the user's device. The local Llama fallback is bundled with the app and is enabled only when the device has enough physical memory; lower-memory devices can use a user-configured API instead. Optional API model availability may depend on the user's network, region, and third-party provider configured in Settings.
-
-## 6. Regulated Industry
-
-The app is not a medical, legal, financial, gambling, insurance, or regulated professional service. AI answers are for learning, writing, and everyday companionship only and should not be treated as professional advice.
+AI output can be inaccurate and is not presented as medical, legal, financial, or other professional advice.
