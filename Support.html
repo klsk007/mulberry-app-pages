@@ -22,7 +22,10 @@
   <p>If recognition is inaccurate, try writing larger, using higher contrast ink, or changing the recognition language in Settings.</p>
 
   <h2>Model Connection</h2>
-  <p>By default, the app uses iOS on-device OCR and Apple's on-device language model, so no API key is needed for the first experience. If Apple on-device AI is unavailable, the app may use the local Llama model bundled with the app. If the answer quality is not enough, switch to High-quality API in Settings and confirm the API key, base URL, and model name.</p>
+  <p>By default, the app uses iOS on-device OCR and Apple's on-device language model, so no API key is needed on supported devices. You can explicitly select Offline Llama or High-quality API in Settings; the app does not silently switch models.</p>
+
+  <h2>Offline Model Storage</h2>
+  <p>Offline Llama is an optional App Store download of about 1.9 GB and is not part of the base install. Select it under Answer Model to download it. Switch to Apple On-device or High-quality API, or tap Release Offline Model, to let iPadOS reclaim the cache. The final purge time is managed by iPadOS.</p>
 
   <h2>Voice Features</h2>
   <p>Voice input requires iOS microphone and speech recognition permissions. Permissions can be changed in the iOS Settings app.</p>

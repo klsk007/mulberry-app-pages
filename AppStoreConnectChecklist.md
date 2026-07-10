@@ -47,7 +47,7 @@ Required:
 - No demo account is required.
 - Add the text from `AppStore/ReviewNotes.md`.
 - Attach a real-device screen recording link.
-- Mention external services/frameworks: StoreKit, Apple Speech, AVFoundation, Vision OCR, Apple Foundation Models, llama.cpp/LlamaSwift local model runtime, bundled local Llama model files, and optional user-configured compatible model APIs such as Alibaba Bailian.
+- Mention external services/frameworks: StoreKit, Apple Speech, AVFoundation, Vision OCR, Apple Foundation Models, the llama.cpp/LlamaSwift runtime, the optional App Store-hosted Offline Llama on-demand asset, and user-configured compatible model APIs.
 
 ## Pricing and Availability
 

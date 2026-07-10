@@ -27,7 +27,7 @@ Answer **No**. The app has no advertising SDK, analytics SDK, ATT request, data 
 ## Notes
 
 - Local diaries, recent conversations, memory cards, settings, and API credentials stay on device. API credentials are stored in Keychain.
-- On-device Vision OCR, Apple Foundation Models, and the bundled Llama model do not send prompts to the developer.
+- On-device Vision OCR, Apple Foundation Models, and the optional App Store-hosted Offline Llama asset do not send prompts to the developer or to the model download source.
 - The privacy policy explains when optional third-party services receive user content.
 
 ## Privacy Manifest In App Bundle

@@ -10,11 +10,11 @@ No account, login, or demo credentials are required.
 4. The handwritten question fades and the answer appears on the same page.
 5. Tap the sun control on the left edge to clear the current answer and write again.
 
-The default OCR is Apple's on-device Vision framework. The default answer engine uses Apple's on-device Foundation Models framework when supported. When Apple on-device AI is unavailable, the app can use its bundled Llama 3.2 3B Instruct Q4_K_M model on devices with sufficient memory. Users may optionally enter their own compatible API credentials in Settings for higher-quality answers or OCR. API credentials are stored in the iOS Keychain.
+The default OCR is Apple's on-device Vision framework. The default answer engine uses Apple's on-device Foundation Models framework when supported. Reviewers can explicitly select Offline Llama in Settings on a physical iPad with at least 5 GiB memory; its approximately 1.9 GB model is then downloaded as an App Store on-demand resource. Users may instead enter compatible API credentials for higher-quality answers or OCR. API credentials are stored in the iOS Keychain.
 
 ## Settings And Pro
 
-Tap the star control on the left edge to open Settings. The settings sheet includes page style, language, OCR/model choices, diary, memory, About, Privacy Policy, and Terms of Use.
+Tap the star control on the left edge to open Settings. The settings sheet includes page style, language, OCR/model choices, optional Offline Llama download/release controls, diary, memory, About, Privacy Policy, and Terms of Use.
 
 Morus Paper Pro is a one-time, non-consumable lifetime purchase. Open the Pro screen from Settings or by selecting a gated feature. It unlocks call mode, custom OCR, long-term memory and automatic compression, formulas and emoji, and permanent access to all paper styles. The purchase screen includes Restore Purchases.
 
